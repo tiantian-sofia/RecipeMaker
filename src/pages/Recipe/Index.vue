@@ -26,8 +26,6 @@
             ]"
         ></q-input>
 
-        <q-toggle v-model="accept" label="I accept the license and terms"></q-toggle>
-
         <div>
             <q-btn label="Submit" type="submit" color="primary"></q-btn>
             <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm"></q-btn>
@@ -39,5 +37,22 @@
 <script>
 export default {
   name: 'Recipe',
+  data() {
+      return {
+          name: 'sss',
+          age:22,
+      }
+  },
+  created() {
+   console.log("sss-----------", this.$storeData)
+  },
+  methods: {
+      onSubmit(){
+
+      },
+      onReset(){
+
+      }
+  }
 };
 </script>
