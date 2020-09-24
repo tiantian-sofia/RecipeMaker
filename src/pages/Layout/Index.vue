@@ -9,7 +9,7 @@
           <q-avatar>
             <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
           </q-avatar>
-          Reciper Maker
+          Recipe Maker
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -44,16 +44,22 @@
 import EssentialLink from 'components/EssentialLink.vue';
 const linksData = [
   {
+    title: 'This week',
+    caption: 'what you will eat this week',
+    icon: 'stars',
+    link: '/thisWeek',
+  },
+  {
     title: 'Add Recipe',
     caption: 'add a new recipe',
     icon: 'add',
     link: '/addRecipe',
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework',
+    title: 'Current Recipes',
+    caption: 'all recipes',
+    icon: 'playlist_add_check',
+    link: '/allRecipes',
   },
   {
     title: 'Discord Chat Channel',
