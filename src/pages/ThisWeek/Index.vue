@@ -6,11 +6,11 @@
       </div>
       <div v-else-if="this.$storeData.recipelist.length < 5">
         at least add 5 recipes ...
-        <q-btn color="primary" label="Add Recipe" to="/addRecipe"/>
+        <q-btn  class="theme text" label="Add Recipe" to="/addRecipe"/>
       </div>
-      <div v-else>
+      <div v-else class="text">
         Click the button to know what you will eat this week ...
-        <q-btn color="primary" label="Start" @click="random()"/>
+        <q-btn class="theme text" label="Start" @click="random()"/>
       </div>
     </div>
     <div v-else>
@@ -40,7 +40,7 @@
         </tr>
       </tbody>
     </q-markup-table>
-    <q-btn color="primary" label="Re Start" @click="random()"/>
+    <q-btn class="theme text" label="Re Start" @click="random()"/>
     </div>
   </q-page>
 </template>

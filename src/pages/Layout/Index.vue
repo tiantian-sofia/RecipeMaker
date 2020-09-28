@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh LpR fFf">
 
-    <q-header elevated class="bg-primary text-white">
+    <q-header elevated class="theme text">
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="left = !left" />
 
@@ -9,7 +9,7 @@
           <q-avatar>
             <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
           </q-avatar>
-          Recipe Maker
+          Recipe Generator
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -26,9 +26,9 @@
       <router-view />
     </q-page-container>
 
-    <q-footer elevated class="bg-grey-6 text-white" >
-      <q-toolbar style="min-height: 30px" >
-        <q-toolbar-title style="font-size:14px; text-align: right;">
+    <q-footer elevated class="theme text" >
+      <q-toolbar class="toolbar" >
+        <q-toolbar-title class="toolbar-title">
           <!-- <q-avatar>
             <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
           </q-avatar> -->
@@ -62,35 +62,11 @@ const linksData = [
     link: '/allRecipes',
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev',
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev',
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev',
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev',
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev',
-  },
+    title: 'Shopping',
+    caption: 'this week shopping list',
+    icon: 'shopping_cart',
+    link: '/shoppingCart',
+  }
 ];
 export default {
   name: 'Layout',
@@ -103,3 +79,21 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.theme {
+  background-color:#f3d2f2;
+}
+.text {
+  color: #4a4848;
+}
+.toolbar {
+  min-height: 30px;
+  .toolbar-title {
+    font-size:14px; 
+    text-align: right;
+  }
+}
+.q-item.q-router-link--active {
+  color: #ca81b6;
+}
+</style>

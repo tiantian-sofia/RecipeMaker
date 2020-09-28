@@ -15,7 +15,7 @@
     <q-item-section 
       
       >
-      <q-item-label>{{ title }}</q-item-label>
+      <q-item-label >{{ title }}</q-item-label>
       <q-item-label caption>
         {{ caption }}
       </q-item-label>
@@ -49,3 +49,6 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+
+</style>
