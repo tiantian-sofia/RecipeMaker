@@ -3,7 +3,7 @@
         <q-form
         @submit="onSubmit"
         @reset="onReset"
-        class="q-gutter-md" style="max-width: 400px;margin:auto;"
+        class="q-gutter-md form"
         >
         <q-input
             filled
@@ -35,8 +35,8 @@
         ></q-input> -->
 
         <div>
-            <q-btn label="Submit" type="submit" color="primary"></q-btn>
-            <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm"></q-btn>
+            <q-btn label="Submit" type="submit" class="theme-color text"></q-btn>
+            <q-btn label="Reset" type="reset"  flat class="q-ml-sm theme-color text"></q-btn>
         </div>
         </q-form>
    
@@ -70,3 +70,15 @@ export default {
   }
 };
 </script>
+<style lang="scss">
+// .form {
+//     max-width: 400px;
+//     margin:auto;
+// }
+@media screen and (max-width:$screen-xs) {
+    // .form{
+    //     max-width: 100%;
+    //     width: 100%;
+    // }
+}
+</style>

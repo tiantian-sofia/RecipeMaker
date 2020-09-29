@@ -4,13 +4,13 @@
       <thead>
         <tr>
           <th class="text-left">Name</th>
-          <th class="text-right">Ingredients</th>
+          <th class="text-left">Ingredients</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="(item, index) in this.$storeData.recipelist" :key="index">
           <td class="text-left">{{item.name}}</td>
-          <td class="text-right">{{item.ingredients}}</td>
+          <td class="text-left">{{item.ingredients}}</td>
         </tr>
       </tbody>
     </q-markup-table>
@@ -19,6 +19,6 @@
 
 <script>
 export default {
-  name: 'PageIndex',
+  name: 'Recipes',
 };
 </script>

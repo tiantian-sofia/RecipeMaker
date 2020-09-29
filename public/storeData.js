@@ -52,7 +52,8 @@ const storeData ={
         }
 
     ],
-    thisweek: null
+    thisweek: null,
+    shoppinglist: null
     
 }
 window.storeData =storeData;

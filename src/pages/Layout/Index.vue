@@ -1,13 +1,13 @@
 <template>
   <q-layout view="hHh LpR fFf">
 
-    <q-header elevated class="theme text">
+    <q-header elevated class="theme-color text">
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="left = !left" />
 
         <q-toolbar-title>
           <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
+            <img src="/icons/small logo.png">
           </q-avatar>
           Recipe Generator
         </q-toolbar-title>
@@ -22,11 +22,11 @@
         />
     </q-drawer>
 
-    <q-page-container>
+    <q-page-container class="container">
       <router-view />
     </q-page-container>
 
-    <q-footer elevated class="theme text" >
+    <q-footer elevated class="theme-color text" >
       <q-toolbar class="toolbar" >
         <q-toolbar-title class="toolbar-title">
           <!-- <q-avatar>
@@ -80,8 +80,8 @@ export default {
 }
 </script>
 <style lang="scss">
-.theme {
-  background-color:#f3d2f2;
+.theme-color {
+  background-color:#fde2ef;
 }
 .text {
   color: #4a4848;
@@ -95,5 +95,14 @@ export default {
 }
 .q-item.q-router-link--active {
   color: #ca81b6;
+}
+.container {
+  margin-top: 20px;
+}
+@media screen and (max-width:$screen-xs) {
+  .container {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
 }
 </style>
