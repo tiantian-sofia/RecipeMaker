@@ -53,7 +53,8 @@ const storeData ={
 
     ],
     thisweek: null,
-    shoppinglist: null
+    shoppinglist: null,
+    purchasedlist: []
     
 }
 window.storeData =storeData;

@@ -97,6 +97,7 @@ export default {
       this.$storeData.setThisweek(this.thisweek)
       let shoppinglist = getShoppinglist(this.thisweek,this.$storeData.recipelist )
       this.$storeData.setShoppinglist(shoppinglist)
+      this.$storeData.setPurchasedlist([])
     },
     getRecipeById(id){
       return this.$storeData.recipelist.find(el=>el.id ===id)

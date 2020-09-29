@@ -22,16 +22,22 @@ class storeData {
     set shoppinglist(shoppinglist){
         this.storeData.shoppinglist = shoppinglist
     }
+    get purchasedlist(){
+        return this.storeData.purchasedlist
+    }
+    set purchasedlist(purchasedlist){
+        this.storeData.purchasedlist = purchasedlist
+    }
     setThisweek(thisweek){
-        console.log("setThisweek l ---------", thisweek)
         this.thisweek = thisweek
     }
     setShoppinglist(shoppinglist){
-        console.log("setShoppinglist l ---------", shoppinglist)
         this.shoppinglist = shoppinglist
     }
+    setPurchasedlist(purchasedlist){
+        this.purchasedlist = purchasedlist
+    }
     getRec(id){
-        console.log("getRec l ---------", id)
         return this.storeData.recipelist.find(el=>el.id ===id)
     }
 
