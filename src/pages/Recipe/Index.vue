@@ -21,19 +21,6 @@
             lazy-rules
             :rules="[ val => val && val.length > 0 || 'Please type something']"
         ></q-input>
-
-        <!-- <q-input
-            filled
-            type="number"
-            v-model="age"
-            label="Your age *"
-            lazy-rules
-            :rules="[
-            val => val !== null && val !== '' || 'Please type your age',
-            val => val > 0 && val < 100 || 'Please type a real age'
-            ]"
-        ></q-input> -->
-
         <div>
             <q-btn label="Submit" type="submit" class="theme-color text"></q-btn>
             <q-btn label="Reset" type="reset"  flat class="q-ml-sm theme-color text"></q-btn>
@@ -55,7 +42,7 @@ export default {
   methods: {
       
       onSubmit(){
-        this.$storeData.recipelist.push({'id': uid(),'name': this.name, 'ingredients': this.ingredients})
+        this.$storeData.setRecipe({'id': uid(),'name': this.name, 'ingredients': this.ingredients})
         this.$q.notify({
             color: 'green-4',
             textColor: 'white',
@@ -71,14 +58,6 @@ export default {
 };
 </script>
 <style lang="scss">
-// .form {
-//     max-width: 400px;
-//     margin:auto;
-// }
 @media screen and (max-width:$screen-xs) {
-    // .form{
-    //     max-width: 100%;
-    //     width: 100%;
-    // }
 }
 </style>

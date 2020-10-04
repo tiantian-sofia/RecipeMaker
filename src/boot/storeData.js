@@ -1,8 +1,15 @@
 // import something here
 import Vue from 'vue'
+import { uid } from 'quasar'
 class storeData {
     constructor(storeData) {
         this.storeData = storeData
+    }
+    get userName(){
+        return this.storeData.userName
+    }
+    set userName(userName){
+        this.storeData.userName = userName
     }
     get recipelist(){
         return this.storeData.recipelist
@@ -28,6 +35,9 @@ class storeData {
     set purchasedlist(purchasedlist){
         this.storeData.purchasedlist = purchasedlist
     }
+    get recommendRecipes(){
+        return this.storeData.recommendRecipes
+    }
     setThisweek(thisweek){
         this.thisweek = thisweek
     }
@@ -36,6 +46,23 @@ class storeData {
     }
     setPurchasedlist(purchasedlist){
         this.purchasedlist = purchasedlist
+    }
+    setRecipe(recipe){
+        this.storeData.recipelist.push(recipe)
+    }
+    selectRecipe(item){
+        this.setRecipe({'id': uid(),'name': item.name, 'ingredients': item.ingredients})
+        this.storeData.recommendRecipes.find(el => el.name === item.name).selected = true
+    }
+    unselectRecipe(item) {
+        let i =this.storeData.recipelist.findIndex(el => el.name === item.name)
+        if(i >-1){
+            this.storeData.recipelist.splice(i, 1)
+            this.storeData.recommendRecipes.find(el => el.name === item.name).selected = false
+        }
+    }
+    login(userName){
+        this.storeData.userName = userName
     }
     getRec(id){
         return this.storeData.recipelist.find(el=>el.id ===id)

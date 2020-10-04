@@ -1,4 +1,5 @@
 const storeData ={
+    userName: null,
     recipelist: [
         {
             id:'7b64fc88-638d-4d6d-a43c-1e761288ca7f',
@@ -51,6 +52,44 @@ const storeData ={
             ingredients: 'salmon, fennel seed, aniseed, ground pepper'
         }
 
+    ],
+    recommendRecipes: [
+        {
+            name: 'BALSAMIC & TOMATO SLOW COOKER LAMB SHANKS1',
+            img: '../recipeImgs/img1.jpg',
+            ingredients: 'Mark lamb shanks, onions, garlic, balsamic vinegar',
+            selected: false
+        },
+        {
+            name: 'BEEF KORMA CURRY PIES2',
+            img: '../recipeImgs/img1.jpg',
+            ingredients: 'beef topside, onions, coconut cream, beef stock',
+            selected: false
+        },
+        {
+            name: 'BALSAMIC & TOMATO SLOW COOKER LAMB SHANKS3',
+            img: '../recipeImgs/img1.jpg',
+            ingredients: 'Mark lamb shanks, onions, garlic, balsamic vinegar',
+            selected: false
+        },
+        {
+            name: 'BEEF KORMA CURRY PIES4',
+            img: '../recipeImgs/img1.jpg',
+            ingredients: 'beef topside, onions, coconut cream, beef stock',
+            selected: false
+        },
+        {
+            name: 'BALSAMIC & TOMATO SLOW COOKER LAMB SHANKS5',
+            img: '../recipeImgs/img1.jpg',
+            ingredients: 'Mark lamb shanks, onions, garlic, balsamic vinegar',
+            selected: true
+        },
+        {
+            name: 'BEEF KORMA CURRY PIES6',
+            img: '../recipeImgs/img1.jpg',
+            ingredients: 'beef topside, onions, coconut cream, beef stock',
+            selected: false
+        }
     ],
     thisweek: null,
     shoppinglist: null,

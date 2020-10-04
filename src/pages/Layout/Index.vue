@@ -11,6 +11,7 @@
           </q-avatar>
           Recipe Generator
         </q-toolbar-title>
+        <q-btn dense flat round icon="perm_identity" />
       </q-toolbar>
     </q-header>
 
@@ -29,9 +30,6 @@
     <q-footer elevated class="theme-color text" >
       <q-toolbar class="toolbar" >
         <q-toolbar-title class="toolbar-title">
-          <!-- <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
-          </q-avatar> -->
           Author Tian Tian
         </q-toolbar-title>
       </q-toolbar>
@@ -56,8 +54,14 @@ const linksData = [
     link: '/addRecipe',
   },
   {
+    title: 'Search Recipe',
+    caption: 'search recipes online',
+    icon: 'search',
+    link: '/searchRecipe',
+  },
+  {
     title: 'Current Recipes',
-    caption: 'all recipes',
+    caption: 'saved recipes',
     icon: 'playlist_add_check',
     link: '/allRecipes',
   },
