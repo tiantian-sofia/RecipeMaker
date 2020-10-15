@@ -17,7 +17,7 @@
             filled
             v-model="ingredients"
             label="Ingredients *"
-            hint="List of ingredients"
+            hint="List of ingredients (Use a space to separate ingredients one by one)"
             lazy-rules
             :rules="[ val => val && val.length > 0 || 'Please type something']"
         ></q-input>

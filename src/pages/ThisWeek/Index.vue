@@ -88,15 +88,7 @@ export default {
       thisweek: this.$storeData.thisweek
     }
   },
-  created() {
-    //this.init()
-  },
   methods: {
-    init() {
-      if(this.$storeData.userName === null){
-        this.$router.push('/login')
-      }
-    },
     random(){
      //let randomlist = getRandomRecipes(this.$storeData.recipelist)
       this.thisweek = getThisWeekRecipes(this.$storeData.recipelist)

@@ -55,17 +55,28 @@ class storeData {
         this.storeData.recommendRecipes.find(el => el.name === item.name).selected = true
     }
     unselectRecipe(item) {
-        let i =this.storeData.recipelist.findIndex(el => el.name === item.name)
+        let i =this.storeData.recipelist?.findIndex(el => el.name === item.name)
         if(i >-1){
             this.storeData.recipelist.splice(i, 1)
             this.storeData.recommendRecipes.find(el => el.name === item.name).selected = false
         }
     }
+    deleteRecipe(id){
+        let i =this.storeData.recipelist?.findIndex(el => el.id === id)
+        if(i >-1){
+            const name = this.storeData.recipelist.find(el => el.id === id).name
+            this.storeData.recipelist.splice(i, 1)
+            if(this.storeData.recommendRecipes.find(el => el.name === name)){
+                this.storeData.recommendRecipes.find(el => el.name === name).selected = false
+            }
+        }
+    }
+    getRecipeById(id){
+        let i =this.storeData.thisweek?.findIndex(el => el === id)
+        return i
+    }
     login(userName){
         this.storeData.userName = userName
-    }
-    getRec(id){
-        return this.storeData.recipelist.find(el=>el.id ===id)
     }
 
 }

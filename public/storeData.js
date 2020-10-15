@@ -82,7 +82,7 @@ const storeData ={
             name: 'BALSAMIC & TOMATO SLOW COOKER LAMB SHANKS5',
             img: '../recipeImgs/img1.jpg',
             ingredients: 'Mark lamb shanks, onions, garlic, balsamic vinegar',
-            selected: true
+            selected: false
         },
         {
             name: 'BEEF KORMA CURRY PIES6',
